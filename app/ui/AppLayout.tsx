@@ -1,6 +1,4 @@
-import Resumes from "~/pages/Resumes";
 import Navbar from "./Navbar";
-import Hero from "~/ui/Hero";
 import Main from "~/ui/Main";
 
 export default function AppLayout() {

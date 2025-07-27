@@ -1,5 +1,5 @@
 import { resumes } from "~/constants";
-import ResumeCard from "../features/Resumes/ResumeCard";
+import ResumeCard from "./ResumeCard";
 
 export default function Resumes() {
   if (resumes.length === 0) return;
