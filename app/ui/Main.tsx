@@ -1,5 +1,5 @@
 import Hero from "./Hero";
-import Resumes from "../pages/Resumes";
+import Resumes from "../features/Resumes/Resumes";
 
 export default function Main() {
   return (
