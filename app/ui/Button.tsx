@@ -1,8 +1,9 @@
 import React from "react";
 
 const style = {
-  primary: "auth-button",
-  secondary: "auth-button animate-pulse",
+  primary: "primary-button",
+  "auth-primary": "auth-button",
+  "auth-secondary": "auth-button animate-pulse",
 };
 
 export default function Button({
@@ -10,7 +11,7 @@ export default function Button({
   children,
   ...rest
 }: {
-  buttonType?: "primary" | "secondary";
+  buttonType?: "primary" | "auth-primary" | "auth-secondary";
   children: React.ReactNode;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>) {
   return (

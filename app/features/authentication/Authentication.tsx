@@ -25,15 +25,19 @@ export default function Authentication() {
           </div>
           <div>
             {isLoading ? (
-              <Button buttonType="secondary" disabled>
+              <Button buttonType="auth-secondary" disabled>
                 Signing you in...
               </Button>
             ) : (
               <>
                 {auth.isAuthenticated ? (
-                  <Button onClick={auth.signOut}>Log Out</Button>
+                  <Button buttonType="auth-primary" onClick={auth.signOut}>
+                    Log Out
+                  </Button>
                 ) : (
-                  <Button onClick={auth.signIn}>Log In</Button>
+                  <Button buttonType="auth-primary" onClick={auth.signIn}>
+                    Log In
+                  </Button>
                 )}
               </>
             )}
