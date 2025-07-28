@@ -4,10 +4,20 @@ import Button from "~/ui/Button";
 import Label from "~/ui/Label";
 import Input from "~/ui/Input";
 import Form from "~/ui/Form";
-import Textarea from "~/ui/TextArea";
+import Textarea from "~/ui/Textarea";
 import FileUploader from "./FileUploader";
+import { useAnalyzeResume } from "./useAnalyzeResume";
 
-export default function AnalyzeResumeForm() {
+type AnalyzeResumeFormProps = {
+  setIsProcessing: React.Dispatch<React.SetStateAction<boolean>>;
+  setStatusText: React.Dispatch<React.SetStateAction<string>>;
+};
+
+export default function AnalyzeResumeForm({
+  setIsProcessing,
+  setStatusText,
+}: AnalyzeResumeFormProps) {
+  const analyze = useAnalyzeResume({ setIsProcessing, setStatusText });
   const [file, setFile] = useState<File | null>(null);
   function handleFileSelect(file: File | null) {
     setFile(file);
@@ -21,7 +31,17 @@ export default function AnalyzeResumeForm() {
     const companyName = formData.get("companyName");
     const jobTitle = formData.get("jobTitle");
     const jobDescription = formData.get("jobDescription");
+
+    if (
+      !file ||
+      typeof companyName !== "string" ||
+      typeof jobTitle !== "string" ||
+      typeof jobDescription !== "string"
+    )
+      return;
+    analyze({ file, companyName, jobTitle, jobDescription });
   }
+
   return (
     <Form id="upload-form" onSubmit={handleSubmit}>
       <FormRow>
