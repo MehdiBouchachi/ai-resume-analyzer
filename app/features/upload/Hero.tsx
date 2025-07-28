@@ -16,7 +16,12 @@ export default function Hero() {
       ) : (
         <h2>Drop your resume for an ATS score and improvement tips</h2>
       )}
-      {!isProcessing && <AnalyzeResumeForm />}
+      {!isProcessing && (
+        <AnalyzeResumeForm
+          setIsProcessing={setIsProcessing}
+          setStatusText={setStatusText}
+        />
+      )}
     </div>
   );
 }
