@@ -39,11 +39,23 @@ label {
   @apply text-dark-200;
 }
 input {
-  @apply w-full p-4 inset-shadow rounded-2xl focus:outline-none bg-white;
+  @apply w-full px-5 py-3 
+    text-base text-gray-900 
+    bg-white rounded-2xl 
+    placeholder:text-dark-200/50 
+    shadow-[inset_0_0_12px_0_rgba(36,99,235,0.15)] 
+    focus:outline-none focus:ring-2 focus:ring-[#8e98ff] 
+    transition duration-300 ease-in-out;
 }
 
 textarea {
-  @apply w-full p-4 inset-shadow rounded-2xl focus:outline-none bg-white;
+  @apply w-full px-5 py-3
+    text-base text-gray-900 bg-white
+    rounded-2xl resize-y
+    placeholder:text-dark-200/50
+    shadow-[inset_0_0_12px_0_rgba(36,99,235,0.15)]
+    focus:outline-none focus:ring-2 focus:ring-[#8e98ff]
+    transition-colors duration-300 ease-in-out;
 }
 
 form {

@@ -1,11 +1,11 @@
+import type { ReactNode } from "react";
 import Navbar from "./Navbar";
-import Main from "~/ui/Main";
 
-export default function AppLayout() {
+export default function AppLayout({ children }: { children?: ReactNode }) {
   return (
     <main className="bg-[url('/images/bg-main.svg')] bg-cover">
       <Navbar />
-      <Main />
+      <section className="main-section">{children}</section>
     </main>
   );
 }

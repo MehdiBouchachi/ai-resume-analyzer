@@ -1,6 +1,6 @@
 import { usePuterStore } from "~/lib/puter";
 import type { Route } from "./+types/home";
-import AppLayout from "~/ui/AppLayout";
+import HomePage from "~/pages/HomePage";
 import { useEffect } from "react";
 import { useNavigate } from "react-router";
 
@@ -20,5 +20,5 @@ export default function Home() {
       navigate("/auth?next=/");
     }
   }, [auth.isAuthenticated]);
-  return <AppLayout />;
+  return <HomePage />;
 }
