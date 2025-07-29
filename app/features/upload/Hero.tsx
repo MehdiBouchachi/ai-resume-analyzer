@@ -1,5 +1,6 @@
 import { useState } from "react";
 import AnalyzeResumeForm from "./AnalyzeResumeForm";
+import Loader from "~/ui/Loader";
 
 export default function Hero() {
   const [isProcessing, setIsProcessing] = useState(false);
@@ -11,7 +12,7 @@ export default function Hero() {
       {isProcessing ? (
         <>
           <h2>{statusText}</h2>
-          <img src="/images/resume-scan.gif" className="w-full" />
+          <Loader />
         </>
       ) : (
         <h2>Drop your resume for an ATS score and improvement tips</h2>

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router";
 import FeedbackSection from "~/features/resumefeedback/feedback/FeedbackSection";
 import { useResumeData } from "~/features/resumefeedback/feedback/useResumeData";
-import ResumeSection from "~/features/resumefeedback/resume/resumeSection";
+import ResumeSection from "~/features/resumefeedback/resume/ResumeSection";
 import ResumeNav from "~/features/resumefeedback/ResumeNav";
 import { usePuterStore } from "~/lib/puter";
 

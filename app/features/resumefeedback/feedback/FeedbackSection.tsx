@@ -1,4 +1,3 @@
-import React from "react";
 import Summary from "./Summary";
 import Details from "./Details";
 import { ATS } from "~/ui/ATS";
