@@ -123,7 +123,7 @@ export async function analyzeResume({
     setError?.(msg);
     return null;
   }
+  
 
-  console.log("✅ Final Resume Analysis Data:", resumeData);
   return resumeData;
 }
