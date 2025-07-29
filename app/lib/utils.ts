@@ -18,6 +18,9 @@
  * Note:
  * If needed, this function can be extended to handle larger units (PB, EB).
  */
+
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 export function formatSize(bytes: number): string {
   if (isNaN(bytes) || bytes < 0) return "0 Bytes";
 
@@ -31,3 +34,7 @@ export function formatSize(bytes: number): string {
 }
 
 export const generateUUID: () => string = () => crypto.randomUUID();
+
+export function cn(...classes: ClassValue[]) {
+  return twMerge(clsx(classes));
+}
