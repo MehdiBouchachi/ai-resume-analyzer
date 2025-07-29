@@ -1,4 +1,5 @@
 import { useCallback } from "react";
+import { useNavigate } from "react-router";
 import { analyzeResume } from "~/lib/services/analyzeResumeService";
 
 export function useAnalyzeResume({
@@ -8,6 +9,7 @@ export function useAnalyzeResume({
   setIsProcessing: (state: boolean) => void;
   setStatusText: (text: string) => void;
 }) {
+  const navigate = useNavigate();
   return useCallback(
     async ({
       file,
@@ -29,6 +31,10 @@ export function useAnalyzeResume({
           jobDescription,
           setStatusText,
         });
+
+        if (result?.id) {
+          navigate(`/resume/${result.id}`);
+        }
         return result;
       } catch (err: any) {
         setStatusText("Error: " + err.message);
