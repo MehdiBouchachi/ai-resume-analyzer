@@ -1,4 +1,3 @@
-// src/hooks/useResumeData.ts
 import { useEffect, useState } from "react";
 import { usePuterStore } from "~/lib/puter";
 
