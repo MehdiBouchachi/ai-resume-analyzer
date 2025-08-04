@@ -1,87 +1,35 @@
-# Welcome to React Router!
+# 🧠 AI Resume Analyzer
 
-A modern, production-ready template for building full-stack React applications using React Router.
+## Overview
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
-
-## Features
-
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
-
-## Getting Started
-
-### Installation
-
-Install the dependencies:
-
-```bash
-npm install
-```
-
-### Development
-
-Start the development server with HMR:
-
-```bash
-npm run dev
-```
-
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+AI Resume Analyzer is a smart web app built with **React 19**, **React Router v7**, **TypeScript**, and **Puter.js**, bootstrapped using **Vite**. It allows users to securely upload resumes, stores them via cloud, and runs AI-powered matching against job descriptions — all wrapped in a clean, modular UI.
 
 ---
 
-Built with ❤️ using React Router.
+## Features
+
+- 👉 **Authentication** – login/signup with session handling via Puter.js  
+- 👉 **Resume Upload & Storage** – files saved and retrieved from the cloud  
+- 👉 **AI Matching** – match resumes to job postings with smart scoring logic  
+- 👉 **Reusable Components** – modular and typed UI with Tailwind CSS  
+- 👉 **Client-Side Routing** – built with React Router v7 (routes/layouts/loaders)  
+- 👉 **Custom Hooks** – logic abstraction for auth, file handling, etc.  
+- 👉 **Vite Setup** – fast build and dev environment  
+
+---
+
+## Tech Stack
+
+| Tool / Library        | Purpose                                |
+|------------------------|----------------------------------------|
+| React 19               | Front-end framework                    |
+| React Router v7        | Routing with layouts & loaders         |
+| TypeScript             | Type-safe development                  |
+| Vite                   | Build tool and dev server              |
+| Puter.js               | Auth and cloud storage integration     |
+| Tailwind CSS           | Utility-first styling                  |
+| Vercel                 | Hosting and CI/CD                      |
+
+---
+
+
